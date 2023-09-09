@@ -73,9 +73,17 @@ const Form = () => {
         event.preventDefault();
         const id = Date.now(); // Generate a unique ID (you can use a different method for generating IDs)
         const value = event.target.elements.expenseItem.value; // Get the value to be stored
+        const costItem = event.target.elements.costItem.value; // Get the item cost
+        const category = event.target.elements.category.value; // Get the item category
+        const description = event.target.elements.description.value; // Get the item description
+        const date = event.target.elements.date.value; // Get the item cost
         const expense = {
             id: id,
             value: value,
+            costItem: costItem,
+            category: category,
+            description: description,
+            date: date
         };
 
         try {
@@ -96,7 +104,7 @@ const Form = () => {
     /* This is a form component that takes user inputs for an expense item, its cost,
      category, description, and date. It uses the useState and handleChange hook to update the form
       data whenever the user enters something in the input fields, and the handleSubmit function to
-       submit the form data to local storage. The component returns a form that contains several
+       submit the form data to IndexedDB. The component returns a form that contains several
         input fields and a submit button. */
     return (
         <FormContainer onSubmit={handleSubmit}>

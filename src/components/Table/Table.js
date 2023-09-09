@@ -43,10 +43,10 @@ import {
 } from "../../consts";
 import SortIcon from "../SortIcon/SortIcon";
 
-const Table = () => {
-    /* This code defines several state variables using the useState hook, and sets their initial values.
-     It also defines an effect that fetches data from localStorage and updates the expenses state variable
+/* This code defines several state variables using the useState hook, and sets their initial values.
+     It also defines an effect that fetches data from IndexedDB and updates the expenses state variable
       when the component mounts. */
+const Table = () => {
     const [expenses, setExpenses] = useState([]);
     const [editingExpenseId, setEditingExpenseId] = useState(null);
     const [sortColumn, setSortColumn] = useState(null);
@@ -59,8 +59,8 @@ const Table = () => {
 
     useEffect(() => {
         const fetchExpenses = async () => {
-            const expensesFromLocalStorage = await getExpense();
-            setExpenses(expensesFromLocalStorage);
+            const expensesFromIndexedDB = await getExpense();
+            setExpenses(expensesFromIndexedDB);
         };
         fetchExpenses();
     }, []);
@@ -132,7 +132,7 @@ const Table = () => {
         setEditingExpenseId(null);
     };
 
-    const handleClearFliter = () => {
+    const handleClearFilter = () => {
         setSelectedMonth("");
         setSelectedYear("");
     };
@@ -225,7 +225,7 @@ const Table = () => {
                     </FilterContainer>
                     <ButtonWrapper>
                         <Label></Label>
-                        <ClearFiltersButton onClick={handleClearFliter}>
+                        <ClearFiltersButton onClick={handleClearFilter}>
                             Clear Filters
                         </ClearFiltersButton>
                     </ButtonWrapper>

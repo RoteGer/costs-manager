@@ -33,7 +33,7 @@ export const formLinkText = 'Form';
 export const submitText = 'Submit';
 export const chooseCategoryText = 'Choose a category';
 export const copyrightsMessage =
-    'Developed by Lidar Baruch, Guy Ofir and Elad Asaf';
+    'Developed by Rotem Gershenzon and Linoy Hovav';
 export const months = [
     { value: '', label: 'All Months' },
     { value: '01', label: 'January' },
