@@ -1,5 +1,10 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 export const expenseItem = 'Expense item: ';
-export const formTitleMessage = 'Welcome to the Cost Manager app!';
+export const formTitleMessage = 'Cost Manager';
 export const currencies = [
     { value: 'NIS', label: '₪' },
     { value: 'USD', label: '$' },

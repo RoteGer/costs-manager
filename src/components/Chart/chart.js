@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import React, { useState, useEffect } from 'react';
 import { getExpense } from '../../idb.js';
 import { categoriesOptions, emptyTableText } from '../../consts';

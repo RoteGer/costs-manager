@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import React, { useState } from 'react';
 import FormField from '../FormField/formfield';
 import {

@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

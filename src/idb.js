@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 // Open or create the IndexedDB database
 const openCostsDB = () => {
     return new Promise((resolve, reject) => {

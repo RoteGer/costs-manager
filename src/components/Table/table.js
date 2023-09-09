@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import React, { useEffect, useState } from "react";
 import {
     StyledTable,
@@ -41,7 +46,7 @@ import {
     currencies,
     chooseCurrencyText,
 } from "../../consts";
-import SortIcon from "../SortIcon/SortIcon";
+import Sorticon from "../SortIcon/sorticon";
 
 /* This code defines several state variables using the useState hook, and sets their initial values.
      It also defines an effect that fetches data from IndexedDB and updates the expenses state variable
@@ -255,7 +260,7 @@ const Table = () => {
                                 ].map(([sortKey, headerText]) => (
                                     <StyledTh key={sortKey} onClick={() => handleSort(sortKey)}>
                                         {headerText}
-                                        <SortIcon />
+                                        <Sorticon />
                                     </StyledTh>
                                 ))}
                                 <StyledTh>Actions</StyledTh>

@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import { FooterContainer, FooterText } from './styled';
 import { copyrightsMessage } from '../../consts';
 

@@ -1,3 +1,8 @@
+/* Written by:
+Rotem Gershenzon - 207495417
+Linoy Hovav - 209198159
+*/
+
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
