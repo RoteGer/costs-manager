@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import backgroundImage from './background.jpg'; // Import your background image
 
 export const FormContainer = styled.form`
   display: flex;
@@ -9,7 +8,6 @@ export const FormContainer = styled.form`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: url(${backgroundImage}) center/cover no-repeat; /* Set the background image */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 `;
@@ -23,7 +21,7 @@ export const FormInput = styled.input`
   padding: 15px 20px;
   margin: 10px 0;
   font-size: 16px;
-  font-weight: bold; /* Add bold text */
+  font-weight: bold;
   border-radius: 8px;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -55,7 +53,7 @@ export const FormTextArea = styled.textarea`
   padding: 15px 20px;
   margin: 10px 0;
   font-size: 16px;
-  font-weight: bold; /* Add bold text */
+  font-weight: bold;
   border-radius: 8px;
   border: 1px solid #ccc;
   background-color: #fff;

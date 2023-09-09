@@ -7,15 +7,17 @@ export const Navbar = styled.nav`
   background-color: #333;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Vertically center items */
   padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 `;
 
 export const NavList = styled.ul`
-  display: flex;
-  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
 `;
 
 export const NavItem = styled.li`
@@ -33,6 +35,6 @@ export const NavLink = styled(Link)`
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: #647c90;
+    color: #00a36c; /* Highlight link color on hover */
   }
 `;

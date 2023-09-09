@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const StyledTable = styled.table`
   width: 95%;
-  margin: 30px auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
   text-align: left;
   table-layout: fixed;
-
   th {
     background-color: #333;
     color: white;
@@ -37,7 +39,7 @@ export const StyledTbody = styled.tbody`
 
 export const StyledTr = styled.tr`
   width: 100%;
-  
+
 `;
 
 export const StyledTd = styled.td`
