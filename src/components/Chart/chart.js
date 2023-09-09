@@ -48,7 +48,6 @@ const ChartComponent = () => {
         setChartData(calculateChartData());
     }, [expenseData]);
 
-    console.log(chartData.length);
     return (
         /* This code creates the pie chart component using the react-google-charts component and passes
         the options arguments to it. If there aren't any expenses, "nothing to show yet!" is presented. */

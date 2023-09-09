@@ -60,6 +60,7 @@ const Table = () => {
     useEffect(() => {
         const fetchExpenses = async () => {
             const expensesFromIndexedDB = await getExpense();
+            console.log(expensesFromIndexedDB[0]);
             setExpenses(expensesFromIndexedDB);
         };
         fetchExpenses();

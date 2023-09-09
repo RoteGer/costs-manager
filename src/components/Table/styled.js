@@ -2,13 +2,11 @@ import styled from 'styled-components';
 
 export const StyledTable = styled.table`
   width: 95%;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
   border-collapse: collapse;
   text-align: left;
   table-layout: fixed;
+
   th {
     background-color: #333;
     color: white;
@@ -125,11 +123,11 @@ export const FilterContainer = styled.div`
 `;
 
 export const Label = styled.label`
-font-size: 20px;
-display: flex;
-width: 20%;
-margin: 10px 10px;
-color: black;
+  font-size: 20px;
+  display: flex;
+  width: 20%;
+  margin: 10px 10px;
+  color: black;
 `;
 
 export const SelectOption = styled.option`

@@ -72,14 +72,14 @@ const Form = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const id = Date.now(); // Generate a unique ID (you can use a different method for generating IDs)
-        const value = event.target.elements.expenseItem.value; // Get the value to be stored
+        const expenseItem = event.target.elements.expenseItem.value; // Get the value to be stored
         const costItem = event.target.elements.costItem.value; // Get the item cost
         const category = event.target.elements.category.value; // Get the item category
         const description = event.target.elements.description.value; // Get the item description
         const date = event.target.elements.date.value; // Get the item cost
         const expense = {
             id: id,
-            value: value,
+            expenseItem: expenseItem,
             costItem: costItem,
             category: category,
             description: description,
