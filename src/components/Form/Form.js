@@ -67,34 +67,26 @@ const Form = () => {
     };
 
     /* This function prevents form default behavior, generates a new expense object and adds it to
-    local storage. If successful, it shows a success message and resets the form data, or shows an
+    indexeddb. If successful, it shows a success message and resets the form data, or shows an
      error message and leaves the form data unchanged if it fails. */
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const id = Date.now().toString();
+        const id = Date.now(); // Generate a unique ID (you can use a different method for generating IDs)
+        const value = event.target.elements.expenseItem.value; // Get the value to be stored
         const expense = {
-            expenseItem: event.target.elements.expenseItem.value,
-            category: event.target.elements.category.value,
-            description: event.target.elements.description.value,
-            date: event.target.elements.date.value,
-            costItem: parseInt(event.target.elements.costItem.value),
             id: id,
+            value: value,
         };
+
         try {
-            await addExpense(expense);
+            await addExpense(expense); // Use the addExpense function to add the expense to IndexedDB
             const message = 'Successfully added item!';
             showSuccess(message);
         } catch (error) {
             const message = `Item not added due to error: ${error}`;
             showError(message);
         }
-        setFormData({
-            expenseItem: '',
-            category: '',
-            description: '',
-            date: Date.now(),
-            costItem: 0,
-        });
+        event.target.reset();
     };
     const options = [
         { value: '', label: chooseCategoryText, disabled: true, hidden: true },

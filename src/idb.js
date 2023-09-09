@@ -1,7 +1,7 @@
 // Open or create the IndexedDB database
-const openDatabase = () => {
+const openCostsDB = () => {
     return new Promise((resolve, reject) => {
-        const request = indexedDB.open('expensesDB', 1);
+        const request = indexedDB.open('costsDB', 1);
 
         request.onupgradeneeded = (event) => {
             const db = event.target.result;
@@ -21,7 +21,7 @@ const openDatabase = () => {
 
 // An asynchronous function that retrieves expense data from IndexedDB
 export const getExpense = async () => {
-    const db = await openDatabase();
+    const db = await openCostsDB();
 
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(['expenses'], 'readonly');
@@ -42,7 +42,7 @@ export const getExpense = async () => {
 
 // An asynchronous function that saves the provided expenses to IndexedDB
 export const setExpense = async (expenses) => {
-    const db = await openDatabase();
+    const db = await openCostsDB();
 
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(['expenses'], 'readwrite');
@@ -68,12 +68,25 @@ export const setExpense = async (expenses) => {
     });
 };
 
-// An asynchronous function that adds a new expense object to IndexedDB
+/// An asynchronous function that adds a new expense object to IndexedDB
 export const addExpense = async (expense) => {
     try {
-        const expenses = await getExpense();
-        expenses.push(expense);
-        await setExpense(expenses);
+        const db = await openCostsDB();
+
+        // Start a new transaction for adding an expense
+        const transaction = db.transaction(['expenses'], 'readwrite');
+        const store = transaction.objectStore('expenses');
+
+        // Add the expense to the store; IndexedDB will automatically generate a unique key
+        const request = store.add(expense);
+
+        request.onsuccess = () => {
+            console.log('Expense added successfully with key: ' + request.result);
+        };
+
+        request.onerror = (event) => {
+            console.error('Error adding expense: ' + event.target.error);
+        };
     } catch (error) {
         console.error(`Error adding expense: ${error}`);
     }
