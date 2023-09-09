@@ -1,25 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import Page from './components/Page/page';
+import { SnackbarProvider } from 'notistack';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
+import Form from './components/Form/Form';
+import Table from './components/Table/Table';
+import ChartComponent from './components/Chart/chart';
+import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
+import { chartRoute, expensesRoute, expensesTitleMessage, formRoute, formTitleMessage, chartTitleMessage } from './consts';
 
-function App() {
+/* This is the main app component */
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <SnackbarProvider maxSnack={3}>
+          <Navigation />
+          <Routes>
+            <Route
+                exact
+                path={formRoute}
+                element={
+                  <Page title={formTitleMessage} component={<Form />} />
+                }
+            />
+            <Route
+                path={expensesRoute}
+                element={
+                  <Page
+                      title={expensesTitleMessage}
+                      component={<Table />}
+                  />
+                }
+            />
+            <Route
+                path={chartRoute}
+                element={
+                  <Page
+                      title={chartTitleMessage}
+                      component={<ChartComponent />}
+                  />
+                }
+            />
+          </Routes>
+          <Footer />
+        </SnackbarProvider>
+      </Router>
   );
-}
-
+};
 export default App;
