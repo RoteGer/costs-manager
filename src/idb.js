@@ -96,22 +96,3 @@ export const addExpense = async (expense) => {
         console.error(`Error adding expense: ${error}`);
     }
 };
-
-// An asynchronous function that deletes an expense object from IndexedDB
-export const deleteExpense = async (expenseId) => {
-    const expenses = await getExpense();
-    const updatedExpenses = expenses.filter((expense) => expense.id !== expenseId);
-    await setExpense(updatedExpenses);
-    return updatedExpenses;
-};
-
-// An asynchronous function that updates an existing expense object in IndexedDB
-export const editExpense = async (expense) => {
-    const expenses = await getExpense();
-    const index = expenses.findIndex((exp) => exp.id === expense.id);
-    if (index !== -1) {
-        expenses[index] = expense;
-        await setExpense(expenses);
-    }
-    return expenses;
-};

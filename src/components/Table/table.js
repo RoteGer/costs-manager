@@ -23,8 +23,6 @@ import {
 } from "./styled";
 import {
     getExpense,
-    editExpense,
-    deleteExpense,
 } from "../../idb";
 import {
     categoriesOptions,
@@ -38,10 +36,6 @@ import {
     costHeaderText,
     categoryHeaderText,
     itemHeaderText,
-    saveButtonText,
-    cancelButtonText,
-    deleteButtonText,
-    editButtonText,
     totalText,
     currencies,
     chooseCurrencyText,
@@ -121,23 +115,6 @@ const Table = () => {
     const firstIndex = lastIndex - itemsPerPage;
     const currentItems = sortedData.slice(firstIndex, lastIndex);
 
-    /* This code sets the editingExpenseId state to the expenseId parameter when the handleClick function is called. */
-    const handleClick = (expenseId) => {
-        setEditingExpenseId(expenseId);
-    };
-
-    /* This code deletes an expense with the expenseId parameter using the deleteExpense function,
-     and updates the expenses state with the resulting array of expenses. */
-    const handleDelete = async (expenseId) => {
-        const expenseAfterRemoval = await deleteExpense(expenseId);
-        setExpenses(expenseAfterRemoval);
-    };
-
-    /* This code ensures that once clicking the cancel button you exit edit mode */
-    const handleCancel = () => {
-        setEditingExpenseId(null);
-    };
-
     const handleClearFilter = () => {
         setSelectedMonth("");
         setSelectedYear("");
@@ -157,30 +134,6 @@ const Table = () => {
         setCurrentPage(pageNumber);
     };
 
-    /* The code is a function that updates an expense record with the new values entered in a form.
-     It performs basic validation to make sure that none of the fields are empty and then sends a
-      request to the server to update the expense. Finally, it updates the state of the expenses in
-       the application and sets the editing expense ID to null. */
-    const handleSave = async (expenseId) => {
-        const expense = {
-            expenseItem: document.getElementsByName("editName")[0].value,
-            category: document.getElementsByName("editCategory")[0].value,
-            description: document.getElementsByName("editDescription")[0].value,
-            date: document.getElementsByName("editDate")[0].value,
-            costItem: parseInt(document.getElementsByName("editCost")[0].value),
-            id: expenseId,
-        };
-        for (let field of Object.values(expense)) {
-            if (!field) {
-                alert("error - you set an empty field");
-                return;
-            }
-        }
-        const updatedExpenses = await editExpense(expense);
-        setExpenses(updatedExpenses);
-        setEditingExpenseId(null);
-    };
-
     let total = 0;
 
     /* This code counts the sum of all the current expenses shown to the user and holds the total */
@@ -189,8 +142,7 @@ const Table = () => {
     });
 
     /* The table component displays a list of expenses and allows filtering by month and year.
-     It includes a table with columns for expense item, category, description, date, cost, and
-      actions. The expense items can be edited or deleted by clicking the respective buttons. The
+     It includes a table with columns for expense item, category, description, date, cost. The
       component calculates and displays the total cost of all expenses. If there are no expenses to show,
        it displays a 'Nothing to show yet' message. */
     return (
@@ -263,7 +215,6 @@ const Table = () => {
                                         <Sorticon />
                                     </StyledTh>
                                 ))}
-                                <StyledTh>Actions</StyledTh>
                             </StyledTr>
                         </StyledThead>
                         <StyledTbody>
@@ -335,27 +286,7 @@ const Table = () => {
                                             `${expense.costItem} ${currency}`
                                         )}
                                     </StyledTd>
-                                    <StyledTd>
-                                        {editingExpenseId === expense.id ? (
-                                            <>
-                                                <Button onClick={() => handleSave(expense.id)}>
-                                                    {saveButtonText}
-                                                </Button>
-                                                <Button onClick={handleCancel}>
-                                                    {cancelButtonText}
-                                                </Button>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Button onClick={() => handleClick(expense.id)}>
-                                                    {editButtonText}
-                                                </Button>
-                                                <Button onClick={() => handleDelete(expense.id)}>
-                                                    {deleteButtonText}
-                                                </Button>
-                                            </>
-                                        )}
-                                    </StyledTd>
+
                                 </StyledTr>
                             ))}
                         </StyledTbody>
