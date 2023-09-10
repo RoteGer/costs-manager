@@ -10,8 +10,8 @@ export const currencies = [
     { value: 'USD', label: '$' },
     { value: 'EUR', label: '€' },
 ];
-export const chooseCurrencyText = 'Choose Currency:';
-export const chartTitleMessage = 'Your expenses in pie chart:';
+export const chooseCurrencyText = 'Choose currency:';
+export const chartTitleMessage = 'Your expenses in a pie chart:';
 export const expensesTitleMessage = 'Your expenses:';
 export const formRoute = '/';
 export const chartRoute = '/chart';
