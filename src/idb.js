@@ -74,7 +74,7 @@ export const setExpense = async (expenses) => {
 };
 
 /// An asynchronous function that adds a new expense object to IndexedDB
-export const addExpense = async (expense) => {
+export const addCost = async (expense) => {
     try {
         const db = await openCostsDB();
 
