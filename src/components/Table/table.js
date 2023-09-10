@@ -219,7 +219,7 @@ const Table = () => {
                         </StyledThead>
                         <StyledTbody>
                             {currentItems.map((expense) => (
-                                <StyledTr key={expense.expenseItem}>
+                                <StyledTr key={expense.id}>
                                     <StyledTd>
                                         {editingExpenseId === expense.id ? (
                                             <input
