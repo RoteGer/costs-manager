@@ -22,6 +22,14 @@ import {
 import { addCost } from '../../idb.js';
 import { useSnackbar } from 'notistack';
 
+// Getting default day as today
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based
+const day = String(currentDate.getDate()).padStart(2, '0');
+
+const initialDate = `${year}-${month}-${day}`;
+
 const Form = () => {
     /* The useSnackbar hook returns an object that includes a function called enqueueSnackbar.
      This function takes two parameters: the message to display and an options object that defines
@@ -46,6 +54,7 @@ const Form = () => {
         });
     };
 
+
     /* This code initializes the value of formData as an object
      with five properties which are later provided by the user filling the form.
      The setFormData function returned by the useState hook is used to update the formData state variable.
@@ -54,7 +63,7 @@ const Form = () => {
         expenseItem: '',
         category: '',
         description: '',
-        date: '',
+        date: initialDate,
         costItem: 0,
     });
 
@@ -103,7 +112,7 @@ const Form = () => {
             expenseItem: '',
             category: '',
             description: '',
-            date: Date.now(),
+            date: initialDate,
             costItem: 0,
         });
     };
