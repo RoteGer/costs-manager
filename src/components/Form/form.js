@@ -99,7 +99,13 @@ const Form = () => {
             const message = `Item not added due to error: ${error}`;
             showError(message);
         }
-        event.target.reset();
+        setFormData({
+            expenseItem: '',
+            category: '',
+            description: '',
+            date: Date.now(),
+            costItem: 0,
+        });
     };
     const options = [
         { value: '', label: chooseCategoryText, disabled: true, hidden: true },
