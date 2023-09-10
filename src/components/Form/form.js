@@ -19,7 +19,7 @@ import {
     FormButton,
     FormContainer,
 } from './styled';
-import { addExpense } from '../../idb.js';
+import { addCost } from '../../idb.js';
 import { useSnackbar } from 'notistack';
 
 const Form = () => {
@@ -92,7 +92,7 @@ const Form = () => {
         };
 
         try {
-            await addExpense(expense); // Use the addExpense function to add the expense to IndexedDB
+            await addCost(expense); // Use the addCost function to add the expense to IndexedDB
             const message = 'Successfully added item!';
             showSuccess(message);
         } catch (error) {
@@ -163,7 +163,6 @@ const Form = () => {
                 max={new Date().toISOString().split('T')[0]}
                 value={formData.date}
                 onChange={handleChange}
-                required
             />
             <FormButton type='submit'>{submitText}</FormButton>
         </FormContainer>
