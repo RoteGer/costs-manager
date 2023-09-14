@@ -292,12 +292,8 @@ const Table = () => {
                         </StyledTbody>
                         <StyledTfoot>
                             <StyledTr>
-                                <StyledTd colspan="8">{totalText}</StyledTd>
+                                <StyledTd colspan="4">{totalText}</StyledTd>
                                 <StyledTd>{`${total} ${currency}`}</StyledTd>
-                                <StyledTd />
-                                <StyledTd />
-                                <StyledTd />
-                                <StyledTd />
                             </StyledTr>
                         </StyledTfoot>
                     </StyledTable>

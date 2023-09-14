@@ -6,7 +6,7 @@ Linoy Hovav - 209198159
 import styled from 'styled-components';
 
 export const StyledTable = styled.table`
-  width: 95%;
+  width: 70%;
   margin-bottom: 30px;
   margin-top: 30px;
   margin-left: auto;
@@ -14,18 +14,19 @@ export const StyledTable = styled.table`
   border-collapse: collapse;
   text-align: left;
   table-layout: fixed;
+  vertical-align: middle;
   th {
     background-color: #333;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
 
   tbody tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color:#f3f6f1;
   }
 
   tbody tr:nth-child(odd) {
-    background-color: #b9b7bd;
+    background-color:#e1e7e7;
   }
 `;
 
