@@ -10,7 +10,7 @@ const openCostsDB = () => {
 
         request.onupgradeneeded = (event) => {
             const db = event.target.result;
-            db.createObjectStore('expenses', { keyPath: 'id', autoIncrement: true });
+            db.createObjectStore('expenses', {keyPath: 'id', autoIncrement: true});
         };
 
         request.onsuccess = (event) => {

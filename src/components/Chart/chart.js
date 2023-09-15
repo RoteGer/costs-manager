@@ -3,13 +3,13 @@ Rotem Gershenzon - 207495417
 Linoy Hovav - 209198159
 */
 
-import React, { useState, useEffect } from 'react';
-import { getExpense } from '../../idb.js';
-import { categoriesOptions, emptyTableText } from '../../consts';
-import { Chart } from 'react-google-charts';
+import React, {useState, useEffect} from 'react';
+import {getExpense} from '../../idb.js';
+import {categoriesOptions, emptyTableText} from '../../consts';
+import {Chart} from 'react-google-charts';
 import countByCategory from './utils';
-import { Message } from '../Table/styled';
-import { ChartContainer } from './styled';
+import {Message} from '../Table/styled';
+import {ChartContainer} from './styled';
 
 const ChartComponent = () => {
     /* two state variables, expenseData and chartData, and sets their initial values to an empty array
@@ -42,7 +42,7 @@ const ChartComponent = () => {
                 });
             });
 
-            const chartData = PieData.map(({ name, value }) => [name, value]);
+            const chartData = PieData.map(({name, value}) => [name, value]);
             return [['Category', 'Total'], ...chartData];
         };
         /* The resulting data is transformed into a format suitable for rendering a pie chart

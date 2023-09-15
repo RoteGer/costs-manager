@@ -4,6 +4,7 @@ Linoy Hovav - 209198159
 */
 
 import styled from 'styled-components';
+
 export const ChartContainer = styled.div`
   display: block;
   align-items: center;

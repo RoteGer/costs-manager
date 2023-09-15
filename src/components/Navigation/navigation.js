@@ -3,8 +3,8 @@ Rotem Gershenzon - 207495417
 Linoy Hovav - 209198159
 */
 
-import { Navbar, NavItem, NavList, NavLink } from './styled';
-import { formLinkText, expensesLinkText, formRoute, expensesRoute, chartRoute } from '../../consts';
+import {Navbar, NavItem, NavList, NavLink} from './styled';
+import {formLinkText, expensesLinkText, formRoute, expensesRoute, chartRoute} from '../../consts';
 
 /* This component defines a Navbar component with the form's route and the expenses route */
 const Navigation = () => {

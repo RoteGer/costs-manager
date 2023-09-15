@@ -55,6 +55,7 @@ export const StyledTd = styled.td`
   word-wrap: break-word;
   box-sizing: border-box;
   position: relative; /* position relative to allow absolute positioning of the input */
+
   input,
   select,
   textarea {
@@ -76,8 +77,8 @@ export const StyledTfoot = styled.tfoot`
   color: white;
   font-weight: bold;
   font-size: 18px;
-  font-family: "Comic Sans MS";  
-  
+  font-family: "Comic Sans MS", serif;
+
   ${StyledTd} {
     position: relative;
 
@@ -104,6 +105,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
   &:hover {
     background-color: #444;
   }
@@ -117,6 +119,7 @@ export const ClearFiltersButton = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
   &:hover {
     background-color: #444;
   }
@@ -157,6 +160,7 @@ export const Select = styled.select`
   border: 1px solid #ccc;
   padding: 5px 10px;
   cursor: pointer;
+
   &:hover {
     background-color: #ccc;
     color: #fff;

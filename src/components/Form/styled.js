@@ -32,6 +32,7 @@ export const FormInput = styled.input`
   background-color: #fff;
   width: 100%;
   transition: border-color 0.3s ease-in-out;
+
   &:focus {
     outline: none;
     border-color: #2aaa8a;
@@ -48,6 +49,7 @@ export const FormSelect = styled.select`
   background-color: #fff;
   width: 100%;
   transition: border-color 0.3s ease-in-out;
+
   &:focus {
     outline: none;
     border-color: #2aaa8a;
@@ -65,6 +67,7 @@ export const FormTextArea = styled.textarea`
   width: 100%;
   min-height: 100px;
   transition: border-color 0.3s ease-in-out;
+
   &:focus {
     outline: none;
     border-color: #2aaa8a;

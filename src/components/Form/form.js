@@ -3,7 +3,7 @@ Rotem Gershenzon - 207495417
 Linoy Hovav - 209198159
 */
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import FormField from '../FormField/formfield';
 import {
     category,
@@ -19,8 +19,8 @@ import {
     FormButton,
     FormContainer,
 } from './styled';
-import { addCost } from '../../idb.js';
-import { useSnackbar } from 'notistack';
+import {addCost} from '../../idb.js';
+import {useSnackbar} from 'notistack';
 
 // Getting default day as today
 const currentDate = new Date();
@@ -34,13 +34,13 @@ const Form = () => {
     /* The useSnackbar hook returns an object that includes a function called enqueueSnackbar.
      This function takes two parameters: the message to display and an options object that defines
       the appearance and behavior of the snack bar. */
-    const { enqueueSnackbar } = useSnackbar();
+    const {enqueueSnackbar} = useSnackbar();
 
     /* This function takes a message as a parameter and calls enqueueSnackbar with the message and
      some options that define the position and style of the snack bar, including a variant of 'success'. */
     const showSuccess = (message) => {
         enqueueSnackbar(message, {
-            anchorOrigin: { vertical: 'top', horizontal: 'right' },
+            anchorOrigin: {vertical: 'top', horizontal: 'right'},
             variant: 'success',
         });
     };
@@ -49,7 +49,7 @@ const Form = () => {
      some options that define the position and style of the snack bar, including a variant of 'error'. */
     const showError = (message) => {
         enqueueSnackbar(message, {
-            anchorOrigin: { vertical: 'top', horizontal: 'right' },
+            anchorOrigin: {vertical: 'top', horizontal: 'right'},
             variant: 'error',
         });
     };
@@ -117,8 +117,8 @@ const Form = () => {
         });
     };
     const options = [
-        { value: '', label: chooseCategoryText, disabled: true, hidden: true },
-        ...categoriesOptions.map((option) => ({ value: option, label: option }))
+        {value: '', label: chooseCategoryText, disabled: true, hidden: true},
+        ...categoriesOptions.map((option) => ({value: option, label: option}))
     ];
 
     /* This is a form component that takes user inputs for an expense item, its cost,

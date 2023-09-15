@@ -3,7 +3,7 @@ Rotem Gershenzon - 207495417
 Linoy Hovav - 209198159
 */
 
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {
     StyledTable,
     StyledTbody,
@@ -212,7 +212,7 @@ const Table = () => {
                                 ].map(([sortKey, headerText]) => (
                                     <StyledTh key={sortKey} onClick={() => handleSort(sortKey)}>
                                         {headerText}
-                                        <Sorticon />
+                                        <Sorticon/>
                                     </StyledTh>
                                 ))}
                             </StyledTr>

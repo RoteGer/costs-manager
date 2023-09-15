@@ -4,9 +4,9 @@ Linoy Hovav - 209198159
 */
 
 import React from 'react';
-import { FormLabel, FormInput, InputContainer, InputWrapper, FormTextArea, FormSelect } from '../Form/styled';
+import {FormLabel, FormInput, InputContainer, InputWrapper, FormTextArea, FormSelect} from '../Form/styled';
 
-const FormField = ({ label, name, value, element, type, options, rows, cols, min, max, onChange, required }) => {
+const FormField = ({label, name, value, element, type, options, rows, cols, min, max, onChange, required}) => {
     const inputProps = {
         name,
         value,
@@ -26,7 +26,7 @@ const FormField = ({ label, name, value, element, type, options, rows, cols, min
 
     if (element === 'textarea') {
         inputElement = (
-            <FormTextArea {...inputProps} rows={rows} cols={cols} />
+            <FormTextArea {...inputProps} rows={rows} cols={cols}/>
         );
     } else if (element === 'select') {
         inputElement = (
