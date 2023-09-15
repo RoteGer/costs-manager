@@ -4,7 +4,7 @@ Linoy Hovav - 209198159
 */
 
 export const expenseItem = 'Expense item: ';
-export const formTitleMessage = 'Cost Manager';
+export const formTitleMessage = '💵 Cost Manager 💵';
 export const currencies = [
     { value: 'NIS', label: '₪' },
     { value: 'USD', label: '$' },

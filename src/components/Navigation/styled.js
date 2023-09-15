@@ -4,12 +4,12 @@ Linoy Hovav - 209198159
 */
 
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export const Navbar = styled.nav`
   position: sticky;
   top: 0;
-  background-color: #333;
+  background-color: #a8c2b5;
   display: flex;
   justify-content: space-between;
   align-items: center; /* Vertically center items */
@@ -35,11 +35,13 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(Link)`
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-decoration: none;
+  font-weight: bold;
+  font-family: Calibri, serif;
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: #00a36c; /* Highlight link color on hover */
+    color: #333333; /* Highlight link color on hover */
   }
 `;

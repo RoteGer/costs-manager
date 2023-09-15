@@ -77,23 +77,25 @@ export const FormButton = styled.button`
   font-size: 18px;
   font-weight: bold; /* Add bold text */
   border-radius: 8px;
-  background-color: #2aaa8a;
+  background-color: #738f5e;
   color: #fff;
   width: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+
   &:hover {
-    background-color: #1a7a60;
+    background-color: #a7c1b4;
   }
+
   &:focus {
     outline: none;
   }
 `;
 
 export const FormLabel = styled.label`
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0;
-  color: #333;
+  color: #000000;
   font-weight: bold; /* Add bold text */
 `;
 

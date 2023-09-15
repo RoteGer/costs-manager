@@ -9,8 +9,9 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  font-family: sans-serif, "Bold";
+  background-color: #a7c1b4;
+  color: Black;
   height: 3.5rem;
   width: 100%;
 `;

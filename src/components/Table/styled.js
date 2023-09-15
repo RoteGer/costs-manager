@@ -15,18 +15,19 @@ export const StyledTable = styled.table`
   text-align: left;
   table-layout: fixed;
   vertical-align: middle;
+
   th {
-    background-color: #333;
+    background-color: #a7c1b4;
     color: white;
     font-size: 1.2vw;
   }
 
   tbody tr:nth-child(even) {
-    background-color:#f3f6f1;
+    background-color: #f3f6f1;
   }
 
   tbody tr:nth-child(odd) {
-    background-color:#e1e7e7;
+    background-color: #e1e7e7;
   }
 `;
 
@@ -71,10 +72,15 @@ export const StyledTd = styled.td`
   }
 `;
 export const StyledTfoot = styled.tfoot`
-  background-color: #333;
+  background-color: #a7c1b4;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Comic Sans MS";  
+  
   ${StyledTd} {
     position: relative;
+
     &:before {
       content: '';
       display: block;

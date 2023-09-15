@@ -172,6 +172,7 @@ const Form = () => {
                 max={new Date().toISOString().split('T')[0]}
                 value={formData.date}
                 onChange={handleChange}
+                required
             />
             <FormButton type='submit'>{submitText}</FormButton>
         </FormContainer>
