@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/costs-manager/static/css/main.073c9b0a.css",
+    "main.js": "/costs-manager/static/js/main.793e36aa.js",
+    "static/js/787.31448aeb.chunk.js": "/costs-manager/static/js/787.31448aeb.chunk.js",
+    "static/media/background.jpg": "/costs-manager/static/media/background.633227f489f6d88e1c78.jpg",
+    "index.html": "/costs-manager/index.html",
+    "main.073c9b0a.css.map": "/costs-manager/static/css/main.073c9b0a.css.map",
+    "main.793e36aa.js.map": "/costs-manager/static/js/main.793e36aa.js.map",
+    "787.31448aeb.chunk.js.map": "/costs-manager/static/js/787.31448aeb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.793e36aa.js"
+  ]
+}
