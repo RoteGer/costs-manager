@@ -26,7 +26,7 @@ import {useSnackbar} from 'notistack';
 const currentDate = new Date();
 const year = currentDate.getFullYear();
 const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based
-const day = String(currentDate.getDate()).padStart(2, '0');
+const day = String(currentDate.getDate()).padStart(2, '0');  // Day is 0-based
 
 const initialDate = `${year}-${month}-${day}`;
 
@@ -90,7 +90,7 @@ const Form = () => {
         const costItem = event.target.elements.costItem.value; // Get the item cost
         const category = event.target.elements.category.value; // Get the item category
         const description = event.target.elements.description.value; // Get the item description
-        const date = event.target.elements.date.value; // Get the item cost
+        const date = event.target.elements.date.value; // Get the item date
         const expense = {
             id: id,
             expenseItem: expenseItem,
