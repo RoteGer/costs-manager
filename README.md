@@ -2,6 +2,10 @@
 
 Web application that helps the user manage his expenses.
 
+# Project's clip:
+https://youtu.be/HaUguOtCXeI?si=fsLJfk2sRMr4TcIW
+
+
 
 
 ![image](https://github.com/user-attachments/assets/090bdf40-863d-49a8-8fd7-e36e0bec967f)
