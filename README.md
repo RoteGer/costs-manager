@@ -2,7 +2,10 @@
 
 Web application that helps the user manage his expenses.
 
-# Project's clip:
+### Website link:
+https://roteger.github.io/costs-manager/
+
+### Project's clip:
 https://youtu.be/HaUguOtCXeI?si=fsLJfk2sRMr4TcIW
 
 
